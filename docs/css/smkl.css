@@ -70,7 +70,7 @@ h1 {font-size: 4em;}
  */
 .masthead {
   margin-top:20px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 10rem;
 text-align: center;
 }
 
@@ -110,6 +110,14 @@ text-align: center;
   .nav-masthead {
     float: right;
   }
+
+}
+
+@media (max-width:766px ) {
+.pad10 {
+  padding-left:0px;
+  text-align: center;
+}
 }
 
 
