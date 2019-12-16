@@ -27,11 +27,8 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #000;
-  background-image: url('../img/smkl-blue-background.jpg');
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  //background-size: cover;
+
+
 
 font-family: 'Exo', sans-serif;
 }
@@ -103,6 +100,7 @@ text-align: center;
   backgound-color: #AE0099 !important;
 }
 
+
 @media (min-width: 48em) {
   .masthead-brand {
     float: left;
@@ -150,6 +148,9 @@ ul.schedule li {
 }
 
 
+.logo {
+  z-index: 999;
+}
 
 /*
  * Footer
@@ -158,4 +159,49 @@ ul.schedule li {
   color: rgba(255, 255, 255, .5);
   font-size: .6em;
   background-color: transparent;
+}
+
+/* Background Video */
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+  background-color:#000 !important;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+
+}
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url('../img/smkl-blue-background.jpg') center center / cover no-repeat;
+    background-color:#000;
+  }
+
+  .fullscreen-bg__video {
+    display: none;
+  }
 }
